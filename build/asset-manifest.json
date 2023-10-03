@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fdbc3029.css",
+    "main.js": "/static/js/main.09625d24.js",
+    "static/js/787.ff98dd28.chunk.js": "/static/js/787.ff98dd28.chunk.js",
+    "static/media/SGI-Logo.png": "/static/media/SGI-Logo.fd27914984c3b0765392.png",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.fdbc3029.css.map": "/static/css/main.fdbc3029.css.map",
+    "main.09625d24.js.map": "/static/js/main.09625d24.js.map",
+    "787.ff98dd28.chunk.js.map": "/static/js/787.ff98dd28.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fdbc3029.css",
+    "static/js/main.09625d24.js"
+  ]
+}
