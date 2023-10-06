@@ -18,7 +18,7 @@ function Login() {
   const [time, settime] = useState(false);
   const [type, setType] = useState("password");
   const [icon, setIcon] = useState(eyeOff);
-  const [disable, setdisable] = useState(false)
+  const [disable, setdisable] = useState(false);
   const [k, setK] = useState(false);
   const [timerState, settimerState] = useState(Date.now());
   const onCompleteTimeFun = () => {
@@ -48,7 +48,6 @@ function Login() {
   };
 
   const getOTP = (e) => {
-    setdisable(true)
     if (userName === "") {
       toast.warn("Enter Email");
     } else {
@@ -56,6 +55,7 @@ function Login() {
         .get("https://localhost:44312/api/DirectLogin")
         .then((res) => {
           // console.log(res.data);
+          setdisable(true);
           sessionStorage.setItem("User", JSON.stringify(res.data));
           toast.success(res.data.Message);
         })
@@ -68,7 +68,7 @@ function Login() {
     e.preventDefault();
     ref.current?.start();
     setTimeout(() => sessionStorage.removeItem("User"), 300000);
-    setTimeout(()=> setdisable(false),300000)
+    setTimeout(() => setdisable(false), 300000);
   };
 
   const handellogin = (e) => {
@@ -156,12 +156,12 @@ function Login() {
                                 OTP Valid for{" "}
                               </p>
                               <Countdown
-                              date={timerState}
-                              renderer={renderer}
-                              ref={ref}
-                              key={k}
-                              onComplete={onCompleteTimeFun}
-                            />
+                                date={timerState}
+                                renderer={renderer}
+                                ref={ref}
+                                key={k}
+                                onComplete={onCompleteTimeFun}
+                              />
                               <p style={{ display: "inline" }}> Min</p>
                             </h6>
                           </div>
